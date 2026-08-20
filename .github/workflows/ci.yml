@@ -7,6 +7,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  APP_NAME: ci-labs
+  NODE_VERSION: '20'
+
 jobs:
   lint:
     name: Lint Code
@@ -23,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: ${{ env.NODE_VERSION }}
       - run: npm test
 
   security-scan:
@@ -42,7 +46,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: ${{ env.NODE_VERSION }}
       - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
