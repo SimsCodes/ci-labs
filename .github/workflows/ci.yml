@@ -60,3 +60,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - run: echo "Build succeeded on main! Would send a Slack/email notification here."
+
+      - name: Use secret
+        run: echo "Token length is ${#DEPLOY_TOKEN} characters"
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
