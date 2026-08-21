@@ -28,8 +28,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-	  cache: 'npm'
-	  cache-dependency-path: package-lock.json
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - run: npm test
 
   security-scan:
@@ -49,8 +49,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-	  cache: 'npm'
-	  cache-dependency-path: package-lock.json
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
