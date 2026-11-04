@@ -1,0 +1,6 @@
+Git and GitHub Practical Exercise
+
+I am learning how to use Git with VS Code.
+I can create branches, track changes, commit files and push code to GitHub.
+
+This is my first feature branch practice.
