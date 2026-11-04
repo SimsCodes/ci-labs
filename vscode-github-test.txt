@@ -1,0 +1,4 @@
+VS Code GitHub Integration Test
+
+My development environment is working.
+I can manage my projects using Git and GitHub.
